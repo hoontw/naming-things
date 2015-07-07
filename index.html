@@ -1,0 +1,377 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>How to Name Things</title>
+
+		<meta name="description" content="How to Name Things in Software Development">
+		<meta name="author" content="Tah Wei Hoon">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="#EEEEEE" data-background-transition="slide">
+					<h1>Untitled Presentation</h1>
+					<h3>How to Name Things</h3>
+				</section>
+
+				<section>
+					<h2>Two Hard Problems in Computer Science</h2>
+					<ol>
+						<li class="fragment">Cache invalidation</li>
+						<li class="fragment">Naming things</li>
+						<li class="fragment">Off-by-one errors</li>
+					</ol>
+					<p class="fragment" style="text-align: right; margin-top: 2em;">
+						<small>Phil Karlton</small>
+					</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section data-background="#EEEEEE">
+					<img width="500" src="images/programmers_hardest_tasks-600x700.jpg" alt="">
+					<p style="text-align: right;">
+						<small>
+							<a href="http://www.itworld.com/cloud-computing/379566/don-t-go-programming-if-you-don-t-have-good-thesaurus">IT World</a>
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Coding Horrors</h2>
+					<pre><code data-trim contenteditable>
+if (data) {
+	if (data.data) {
+		data = data.data;
+	}
+}
+
+addBottomWhiteBorderIfFirstOfMultipleCarousel();
+					</code></pre>
+				</section>
+
+                <section data-background="images/4983505622_6bd0046832_b_darkened.jpg">
+                    <h2 style="color: #eeeeee;">Programming is communication</h2>
+                    <p style="color: #eeeeee;">Lesser mortals write for computers</p>
+                    <p style="color: #eeeeee;">Great developers write for humans</p>
+                </section>
+
+				<section>
+					<h2>Experiment</h2>
+					<p>Give a name for the variable
+					<pre><code data-trim contenteditable>
+decimal ??? = 0;
+
+forEach (item in cart)
+{
+	??? += item.Price;
+}
+					</code></pre>
+				</section>
+
+                <section data-background="images/8733059592_c6f6c156cb_b_darkened.jpg">
+                    <h2 style="color: #eeeeee;">Conversation</h2>
+                    <p style="color: #eeeeee;">Leverage mutual knowledge</p>
+                    <p style="color: #eeeeee;">Engage in reflexive thinking</p>
+                </section>
+
+                <section data-transition="fade" data-background="images/word-cloud-679936_1280_darkened.jpg">
+                    <h2 style="color: #eeeeee;">Good names are</h2>
+                    <ol style="color: #eeeeee;">
+                        <li>Readable</li>
+                        <li>Accurate</li>
+                        <li>Descriptive</li>
+                        <li>Short, but no shorter</li>
+                        <li>Unique</li>
+                        <li>Memorable</li>
+                    </ol>
+                </section>
+
+                <section data-transition="fade" data-background="images/word-cloud-679936_1280_lightened.jpg">
+                    <h2>Bad names are</h2>
+                    <ol>
+                        <li>nsReqProd</li>
+                        <li>getName() with side-effects</li>
+                        <li>Object</li>
+                        <li>flushAllTemporaryBuffersIfClearFlagIsSet()</li>
+                        <li>VideoItemCover</li>
+                        <li>a</li>
+                    </ol>
+                </section>
+
+				<section>
+					<h2>Things</h2>
+					<p>Concept</p>
+					<p>Library | Namespace</p>
+					<p>Class | Module</p>
+					<p>Function | Method | Procedure | Routine</p>
+					<p>Variable</p>
+				</section>
+
+				<section>
+					<h2>Casing Conventions</h2>
+					<p style="font-family: monospace;">PascalCase</p>
+					<p style="font-family: monospace;">camelCase (lower)</p>
+					<p style="font-family: monospace;">snake_case</p>
+					<p style="font-family: monospace;">SCREAMING_SNAKE_CASE</p>
+					<p style="font-family: monospace;">train-case</p>
+				</section>
+
+				<section>
+					<h2>Naming Conventions</h2>
+					<ul>
+                        <li>C# <small style="vertical-align: middle; color: #888">Pascal for classes, methods; Camel for variables</small></li>
+                        <li>Java <small style="vertical-align: middle; color: #888">Pascal for classes; Camel for methods, variables</small></li>
+                        <li>Python <small style="vertical-align: middle; color: #888">Pascal for classes; Camel/Snake for functions, variables</small></li>
+                        <li>Ruby <small style="vertical-align: middle; color: #888">Camel for classes; Snake for functions, variables</small></li>
+                        <li>JavaScript <small style="vertical-align: middle; color: #888">Camel for constructors; Camel for functions, variables</small></li>
+					</ul>
+					<p style="margin-top: 1em;">
+						<small>
+							Stick to the convention of a language, even in mixed-language programming<br>
+							Exception: if developers cross languages frequently
+						</small>
+					</p>
+				</section>
+
+				<section data-background="#FDFDCC">
+					<h2>Variable Naming</h2>
+					<h3>Ideas</h3>
+					<ul>
+                        <li>Prefer why > what <small style="vertical-align: middle; color: #888">THREE = 3 (bad)</small></li>
+                        <li>Look to domain terminology</li>
+                        <li>Identify points of variation</li>
+                        <li>Use opposites <small style="vertical-align: middle; color: #888">previous/next</small></li>
+                        <li>Use literal phrases <small style="vertical-align: middle; color: #888">totalCustomersInCanada</small></li>
+                        <li>Contextualize with qualifiers <small style="vertical-align: middle; color: #888">itemPrice vs item.price</small></li>
+					</ul>
+				</section>
+
+				<section data-background="#FDFDCC">
+					<h2>Variable Naming</h2>
+					<h3>Guidelines</h3>
+					<ul>
+						<li>Use ASCII characters only
+                        <li>Avoid confusing characters <small style="vertical-align: middle; color: #888">oO0iIl1</small></li>
+                        <li>Avoid words with multiple meanings <small style="vertical-align: middle; color: #888">number</small></li>
+                        <li>Avoid overloading established words <small style="vertical-align: middle; color: #888">stack</small></li>
+                        <li>Use full words and standard abbreviations</li>
+					</ul>
+				</section>
+
+				<section data-background="#FDFDCC">
+					<h2>Variable Naming</h2>
+					<h3>Guidelines</h3>
+					<ul>
+                        <li>Standardize order of qualifiers <small style="vertical-align: middle; color: #888">fruitTotal vs totalFruit</small></li>
+                        <li>Spellcheck <small style="vertical-align: middle; color: #888">US or UK</small></li>
+                        <li>Prefix booleans with is- or has-</li>
+                        <li>Avoid negatives <small style="vertical-align: middle; color: #888">isInactiveDisabled</small></li>
+                        <li>Pluralize enums and collections</li>
+					</ul>
+				</section>
+
+				<section data-background="#FDFDCC">
+					<h2>Variable Naming</h2>
+					<h3>Exercise</h3>
+					<p>Replace condition with variable</p>
+					<pre><code data-trim contenteditable>
+string displayName;
+
+if (patient != null
+    && patient.name != null
+    && patient.name != ""
+    && !privacyPolicy.isAnonymous(patient))
+{
+	displayName = String.format("Patient {0}", patient.name);
+}
+else
+{
+	displayName = "X";
+}
+					</code></pre>
+				</section>
+
+				<section data-background="#BBEEBB">
+					<h2>Function Naming</h2>
+					<h3>Ideas</h3>
+					<ul>
+                        <li>Prefer why > how</li>
+                        <li>Look to domain terminology</li>
+                        <li>Refer to recognized patterns <small style="vertical-align: middle; color: #888">Factory.create()</small></li>
+                        <li>Look for established concepts <small style="vertical-align: middle; color: #888">push, pop, flush</small></li>
+                        <li>Think symmetry <small style="vertical-align: middle; color: #888">open(file)/close(file)</small></li>
+					</ul>
+				</section>
+
+				<section data-background="#BBEEBB">
+					<h2>Function Naming</h2>
+					<h3>Guidelines</h3>
+					<ul>
+                        <li>Use prepositions for transformations <small style="vertical-align: middle; color: #888">celsiusToFarenheit()</small></li>
+                        <li>Standardize syntax of getters/setters <small style="vertical-align: middle; color: #888">Product.Price() vs Product.GetPrice()</small></li>
+                        <li>Avoid words with multiple meanings <small style="vertical-align: middle; color: #888">number</small></li>
+                        <li>Avoid overloading established words <small style="vertical-align: middle; color: #888">stack</small></li>
+                        <li>Use full words and standard abbreviations</li>
+					</ul>
+				</section>
+
+
+				<section data-background="#BBEEBB">
+					<h2>Function Naming</h2>
+					<h3>Exercise</h3>
+					<p>Name the function</p>
+					<pre><code data-trim contenteditable>
+public TaxRules ??? (PricingContext context)
+if (context.hasTaxOverride) {
+	return context.getTaxOverride();
+}
+else if (context.isTaxFree) {
+	return new NullTaxRules();
+}
+else if (context.geo !== null) {
+	if (!context.geo.isInEu) {
+		return new EuTaxRules();
+	}
+	else {
+		return new DefaultTaxRules();
+	}
+}
+else {
+	return null;
+}
+					</code></pre>
+				</section>
+
+				<section data-background="#FFD1DC">
+					<h2>Concept Naming</h2>
+					<h3>Ideas</h3>
+					<ul>
+                        <li>Create portmanteaus <small style="vertical-align: middle; color: #888">facetime</small></li>
+                        <li>Use metaphors and analogies <small style="vertical-align: middle; color: #888">token</small></li>
+                        <li>Invoke imagery <small style="vertical-align: middle; color: #888">toast</small></li>
+                        <li>Tell a story <small style="vertical-align: middle; color: #888">bug</small></li>
+                        <li>Consult a thesaurus</li>
+					</ul>
+				</section>
+
+				<section data-background="#FFD1DC">
+					<h2>Concept Naming</h2>
+					<h3>Guidelines</h3>
+					<ul>
+                        <li>Avoid made-up words <small style="vertical-align: middle; color: #888">cystilizer</small></li>
+                        <li>Avoid overloaded words <small style="vertical-align: middle; color: #888">kernel</small></li>
+                        <li>Avoid trademarks <small style="vertical-align: middle; color: #888">Xerox, Google</small></li>
+					</ul>
+				</section>
+
+				<section data-background="#FFD1DC">
+					<h2>Concept Naming</h2>
+					<h3>Exercise</h3>
+					<p>Pull to refresh components</p>
+					<img width="640" src="images/3023421-inline-pulltorefresh.gif" alt="">
+                    <p><a href="http://www.fastcodesign.com/3023421/why-the-pull-to-refresh-gesture-must-die"><small>Fast Company</small></a></p>
+				</section>
+
+				<section data-background="#BBBBBB">
+					<h2>Fluffy Words Greylist</h2>
+					<ul>
+                        <li><strong>Verbs</strong> do, handle, process, perform</li>
+                        <li><strong>Nouns</strong> callback, car1 car2, data, feature, handler, manager, object, thing</li>
+                        <li><strong>Adjectives</strong> fast, normal, smart, temp</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+				</section>
+
+                <section data-background="#EEEEEE">
+                    <h2>Credits</h2>
+                    <p>Background Images (in order of appearance)</p>
+                    <ul style="font-size: 0.4em; line-height: 1.2;">
+                        <li>Daniel Lombraña González, "La piedra Rosetta", https://www.flickr.com/photos/teleyinex/4983505622, CC Attribution-ShareAlike 2.0, with modifications to darken image;</li>
+                        <li>Board of European Students of Technology, "Discussion group during GA", https://www.flickr.com/photos/bestorg/8733059592/, CC Attribution-NonCommercial 2.0, with modifications to darken image;</li>
+                        <li>Pixabay, https://pixabay.com/en/word-cloud-words-tag-cloud-679936/, CC0 Public Domain, with darkened and lightened variants;</li>
+                    </ul>
+                    <img style="display: block; margin: 1em auto 0.2em;" src="images/cc-by-button.svg" alt="" />
+                    <div style="font-size: 0.6em; line-height: 1.2;">
+                        <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+                        <p>Suggestions or errata? Contact TW Hoon at GitHub (username: hoontw).</p>
+                    </div>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: false,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
